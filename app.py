@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 from htmlTemplates import css, bot_template, user_template
-from Backend_logic import pdf_to_text , text_to_chunk , get_vectorstore , conversation_chain
+from Backend_logic import *
 
 
 

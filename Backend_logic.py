@@ -8,9 +8,6 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.llms import HuggingFaceHub
 
 
-
-
-
 def pdf_to_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -20,7 +17,7 @@ def pdf_to_text(pdf_docs):
     return text
 
 
-def get_text_chunks(text):
+def text_to_chunk(text):
     text_splitter = CharacterTextSplitter(
         separator="\n",
         chunk_size=1000,
@@ -38,7 +35,7 @@ def get_vectorstore(text_chunks):
     return vectorstore
 
 
-def get_conversation_chain(vectorstore):
+def conversation_chain(vectorstore):
     llm = ChatOpenAI()
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 

@@ -20,7 +20,7 @@ def pdf_to_text(pdf_docs):
     return text
 
 
-def text_to_chunks(text):
+def text_to_chunk(text):
     text_splitter = CharacterTextSplitter(
         separator="\n",
         chunk_size=1000,

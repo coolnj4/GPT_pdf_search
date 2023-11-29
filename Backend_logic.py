@@ -8,9 +8,6 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.llms import HuggingFaceHub
 
 
-
-
-
 def pdf_to_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
